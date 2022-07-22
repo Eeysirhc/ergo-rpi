@@ -60,13 +60,13 @@ curl -X POST "http://213.239.193.208:9053/utils/hash/blake2b" \
 
 ### Add Config File
 
-The following command opens up your Pi text editor.
+The following command opens up the text editor.
 
 ```bash
 sudo nano ergo.conf 
 ```
 
-Then paste the contents below while remembering to repalce the `apiKeyHash` with the response from the previous step.
+Then copy & paste the contents below while also replacing the `apiKeyHash` with the response from the previous step.
 
 ```bash
 ergo {
@@ -91,17 +91,25 @@ scorex {
 java -Xmx2g -jar ergo-<node-version>.jar --mainnet -c ergo.conf
 ```
 
+### Web UI access
+
+Below is the default address but if you're running headless then replace the `127.0.0.1` portion with your `<rpi-ip-address>`.
+
+```bash
+http://127.0.0.1:9053/panel
+```
+
 ## Coming soon
 
 - [ ] [Ergo Mixer](https://github.com/ergoMixer/ergoMixBack)
-- [ ] [ErgoDEX Off-Chain Service](https://github.com/ergolabs/ergo-dex-backend)
+- [ ] [ErgoDEX Off-Chain Bots](https://github.com/ergolabs/ergo-dex-backend)
 - [ ] [Ergo Off-Chain Execution](https://github.com/ergo-pad/ergo-offchain-execution)
-- [ ] [ErgoPAD Off-Chain Execution](https://github.com/ergo-pad/ergopad-offchain)
-- [ ] [Paideia Off-Chain Execution](https://github.com/ergo-pad/paideia-offchain)
+- [ ] [ErgoPad Off-Chain](https://github.com/ergo-pad/ergopad-offchain)
+- [ ] [Paideia Off-Chain](https://github.com/ergo-pad/paideia-offchain)
 
 ## systemd
 
-Ideally, your Ergo node runs in the background and automatically restarts itself in the event of an outage. The steps below detail how to setup this process for your Raspberry Pi.
+Ideally, your Ergo services runs in the background and automatically reboots in the event of an outage. The steps below detail how to setup this process for the node on your Raspberry Pi as an example.
 
 ### Create service
 
@@ -139,6 +147,8 @@ sudo systemctl daemon-reload
 sudo systemctl enable ergonode.service
 sudo systemctl start ergonode.service
 ```
+
+
 
 
 
