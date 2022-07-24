@@ -56,7 +56,7 @@ curl -X POST "http://213.239.193.208:9053/utils/hash/blake2b" \
 -d "\"hello\""
 ```
 
-### Add Config file
+### Add config file
 
 The following command opens up the text editor.
 
