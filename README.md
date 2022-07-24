@@ -10,7 +10,7 @@ The node is a critical piece of infrastructure to interact, host, and synchroniz
 
 ### Minimum requirements
 
-* Raspberry Pi 4 with 4GB RAM (or more)
+* Raspberry Pi 4 with 4GB RAM 
 * 32GB MicroSD: total sync time of 4.5 days
 * 256GB MicroSD: total sync time of 1.5 days
 
@@ -39,12 +39,10 @@ sudo reboot now
 
 ### Download JAR
 
-Find the latest release in their [GitHub](https://github.com/ergoplatform/ergo/releases).
+Find the latest release in the [Ergo GitHub](https://github.com/ergoplatform/ergo/releases).
 
 ```bash
-mkdir ergo
-cd ergo
-wget https://github.com/ergoplatform/ergo/releases/download/v<node-version>/ergo-<node-version>.jar
+wget https://github.com/ergoplatform/ergo/releases/download/v<VERSION>/ergo-<VERSION>.jar
 ````
 
 ### Compute API key hash
@@ -58,7 +56,7 @@ curl -X POST "http://213.239.193.208:9053/utils/hash/blake2b" \
 -d "\"hello\""
 ```
 
-### Add Config File
+### Add Config file
 
 The following command opens up the text editor.
 
@@ -86,9 +84,9 @@ scorex {
 }
 ```
 
-### Launch Node (with 2G heap size)
+### Launch node (with 2G heap size)
 ```bash
-java -Xmx2g -jar ergo-<node-version>.jar --mainnet -c ergo.conf
+java -jar -Xmx2g ergo-<NODE>.jar --mainnet -c ergo.conf
 ```
 
 ### Web UI access
@@ -101,6 +99,7 @@ http://127.0.0.1:9053/panel
 
 ## Coming soon
 
+- [ ] [Ergo Wallet App (desktop)](https://github.com/ergoplatform/ergo-wallet-app)
 - [ ] [Ergo Mixer](https://github.com/ergoMixer/ergoMixBack)
 - [ ] [ErgoDEX Off-Chain Bots](https://github.com/ergolabs/ergo-dex-backend)
 - [ ] [Ergo Off-Chain Execution](https://github.com/ergo-pad/ergo-offchain-execution)
@@ -109,7 +108,7 @@ http://127.0.0.1:9053/panel
 
 ## systemd
 
-Ideally, your Ergo services runs in the background and automatically reboots in the event of an outage. The steps below detail how to setup this process for the node on your Raspberry Pi as an example.
+Ideally, your Ergo services run in the background and automatically reboots in the event of an outage. The steps below is one example on how to setup this process for the node on your Raspberry Pi.
 
 ### Create service
 
@@ -127,7 +126,7 @@ After=multi-user.target
 [Service]
 WorkingDirectory=/path/to/ergo-node
 User=pi
-ExecStart=/usr/bin/java -jar -Xmx2g /path/to/ergo-node/ergo-<node-version>.jar --mainnet -c /path/to/ergo-node/ergo.conf
+ExecStart=/usr/bin/java -jar -Xmx2g /path/to/ergo-node/ergo-<VERSION>.jar --mainnet -c /path/to/ergo-node/ergo.conf
 Restart=on-failure
 
 [Install]
@@ -147,8 +146,4 @@ sudo systemctl daemon-reload
 sudo systemctl enable ergonode.service
 sudo systemctl start ergonode.service
 ```
-
-
-
-
 
