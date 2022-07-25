@@ -1,6 +1,6 @@
 # ergo-rpi
 
-This repo is primarily intended for developers running headless Raspberry Pi's (no desktop environment) and want to use the various Ergo services. With that said, individuals running the desktop version can easily follow this guide by running the same commands in their Pi terminal window.
+This repo is primarily intended for developers running headless Raspberry Pi's (no desktop environment) and want to use the various Ergo services. With that said, individuals with the desktop version can still follow this guide by executing the same commands in their Pi terminal window.
 
 ## [Ergo Node](https://github.com/ergoplatform/ergo)
 
