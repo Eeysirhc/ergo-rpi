@@ -1,6 +1,6 @@
 # ergo-rpi
 
-This repo is primarily intended for developers running headless Raspberry Pi's (no desktop environment) and want to use the various Ergo services. With that said, individuals with the desktop version can still follow this guide by executing the same commands in their Pi terminal window.
+This repo is primarily intended for developers running headless Raspberry Pi's (no desktop environment) who want to use the various Ergo services. With that said, individuals on the desktop version can still follow this guide by executing the same commands in their Pi terminal window.
 
 ## [Ergo Node](https://github.com/ergoplatform/ergo)
 
@@ -12,8 +12,13 @@ The node is a critical piece of infrastructure to interact, host, and synchroniz
 
 * Raspberry Pi 4 with 4GB RAM 
 * Installed Raspberry Pi OS (64-bit) with the [official imager](https://www.raspberrypi.com/software/)
-* 32GB MicroSD: total sync time of 4.5 days
-* 256GB MicroSD: total sync time of 1.5 days
+
+### [WIP] Node sync table
+| Release | MicroSD size | SWAP increase | SWAP default | 
+| --- | --- | --- | --- | 
+| 4.0.27 | 32gb | 4.5 days | - | 
+| 4.0.27 | 256gb | 1.5 days | - | 
+| 4.0.35 | 256gb | - | in progress | 
 
 ### Prepare installation
 ```bash
@@ -147,4 +152,3 @@ sudo systemctl daemon-reload
 sudo systemctl enable ergonode.service
 sudo systemctl start ergonode.service
 ```
-
