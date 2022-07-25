@@ -1,6 +1,6 @@
-# ErgoPi
+# ergo-rpi
 
-To do: add repo objective & description
+This repo is primarily intended for developers running headless Raspberry Pi's (no desktop environment) and want to use the various Ergo services. With that said, individuals running the desktop version can easily follow this guide by running the same commands in their Pi terminal window.
 
 ## [Ergo Node](https://github.com/ergoplatform/ergo)
 
@@ -84,7 +84,7 @@ scorex {
 }
 ```
 
-### Launch node (with 2G heap size)
+### Launch node (with 2gb heap size)
 ```bash
 java -jar -Xmx2g ergo-<NODE>.jar --mainnet -c ergo.conf
 ```
