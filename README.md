@@ -126,7 +126,7 @@ After=multi-user.target
 [Service]
 WorkingDirectory=/path/to/ergo-node
 User=pi
-ExecStart=/usr/bin/java -jar -Xmx2g /path/to/ergo-node/ergo-<VERSION>.jar --mainnet -c /path/to/ergo-node/ergo.conf
+ExecStart=/usr/bin/java -jar -Xmx2g ergo-<VERSION>.jar --mainnet -c ergo.conf
 Restart=on-failure
 
 [Install]
