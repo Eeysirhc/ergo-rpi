@@ -14,11 +14,11 @@ The node is a critical piece of infrastructure to interact, host, and synchroniz
 * Installed Raspberry Pi OS (64-bit) with the [official imager](https://www.raspberrypi.com/software/)
 
 ### [WIP] Sync table
-| Release | MicroSD size | SWAP config | headers | node | wallet | total | 
-| --- | --- | --- | --- | --- | --- | --- | 
-| 4.0.27 | 32gb | optimized | - | - | - | 4.5 days | 
-| 4.0.27 | 256gb | optimized | - | - | - | 1.5 days | 
-| 4.0.35 | 256gb | default | 2h 15m | [in progress] | - | - | 
+| Release | MicroSD size | SWAP config | Crashes | Sync: headers | Sync: node | Sync: wallet | Sync: total | 
+| --- | --- | --- | --- | --- | --- | --- | --- | 
+| 4.0.27 | 32gb | optimized | 4 | - | - | - | 4.5 days | 
+| 4.0.27 | 256gb | optimized | 1 | - | - | - | 1.5 days | 
+| 4.0.35 | 256gb | default | 0 | 2h 15m | [in progress] | - | - | 
 
 ### Prepare installation
 ```bash
