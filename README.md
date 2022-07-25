@@ -13,12 +13,12 @@ The node is a critical piece of infrastructure to interact, host, and synchroniz
 * Raspberry Pi 4 with 4GB RAM 
 * Installed Raspberry Pi OS (64-bit) with the [official imager](https://www.raspberrypi.com/software/)
 
-### [WIP] Node sync table
-| Release | MicroSD size | SWAP increase | SWAP default | 
-| --- | --- | --- | --- | 
-| 4.0.27 | 32gb | 4.5 days | - | 
-| 4.0.27 | 256gb | 1.5 days | - | 
-| 4.0.35 | 256gb | - | in progress | 
+### [WIP] Sync table
+| Release | MicroSD size | SWAP config | headers | node | wallet | total | 
+| --- | --- | --- | --- | --- | --- | --- | 
+| 4.0.27 | 32gb | optimized | - | - | - | 4.5 days | 
+| 4.0.27 | 256gb | optimized | - | - | - | 1.5 days | 
+| 4.0.35 | 256gb | default | 2h 15m | [in progress] | - | - | 
 
 ### Prepare installation
 ```bash
