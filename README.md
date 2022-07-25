@@ -11,6 +11,7 @@ The node is a critical piece of infrastructure to interact, host, and synchroniz
 ### Minimum requirements
 
 * Raspberry Pi 4 with 4GB RAM 
+* Installed Raspberry Pi OS (64-bit) with the [official imager](https://www.raspberrypi.com/software/)
 * 32GB MicroSD: total sync time of 4.5 days
 * 256GB MicroSD: total sync time of 1.5 days
 
