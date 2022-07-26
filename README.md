@@ -97,10 +97,10 @@ java -jar -Xmx2g ergo-<NODE>.jar --mainnet -c ergo.conf
 
 ### Web UI access
 
-Below is the default address but if you're running headless then replace the `127.0.0.1` portion with your `<rpi-ip-address>`.
+The default address is `127.0.0.1` but if you're running headless then you can bring up the node UI on a separate computer.
 
 ```bash
-http://127.0.0.1:9053/panel
+http://<RPI-IP-ADDRESS>:9053/panel
 ```
 
 ## Coming soon
