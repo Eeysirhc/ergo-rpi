@@ -18,7 +18,8 @@ The node is a critical piece of infrastructure to interact, host, and synchroniz
 | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 4.0.27 | 32gb | optimized | 4 | 3h | 90h | 15h | 4.5 days | 
 | 4.0.27 | 256gb | optimized | 0 | 1h | 30h | 5h | 1.5 days | 
-| 4.0.35 | 256gb | default | 0 | 2h 15m | [in progress] | - | - | 
+| 4.0.35 | 256gb | default | 2 | 2h 15m | [in progress] | - | - | 
+| 4.0.35 | 256gb | optimized | 0 | [in progress] | - | - | - | 
 
 ### Prepare installation
 ```bash
