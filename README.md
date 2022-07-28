@@ -17,8 +17,8 @@ The node is a critical piece of infrastructure to interact, host, and synchroniz
 | Release | MicroSD | SWAP config | Crashes | Headers | Node | Wallet | Total | 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 4.0.35 | 256gb | yes | - | 2h | [in progress] | - | - | 
-| 4.0.35 | 256gb | - | 2 | 2.25h | 46h | [in progress] | - | 
-| 4.0.27 | 256gb | yes | - | 1h | 30h | 5hr | 1.5 days | 
+| 4.0.35 | 256gb | - | 2 | 2.25h | 46h | 36h | 3.5 days | 
+| 4.0.27 | 256gb | yes | - | 1h | 30h | 5h | 1.5 days | 
 | 4.0.27 | 32gb | yes | 4 | 3h | 90h | 15h | 4.5 days | 
 
 
