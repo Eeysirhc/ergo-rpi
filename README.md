@@ -6,21 +6,12 @@ This repo is primarily intended for developers running headless Raspberry Pi's (
 
 The node is a critical piece of infrastructure to interact, host, and synchronize a copy of the entire Ergo blockchain. There is no financial incentive to run a node but doing so helps increase the security of the network.
 
-> Note: as of this writing, release 4.0.27 has demonstrated itself to have the fastest sync time for the Pi. You can swap over to the latest version after the network sync is complete.
-
 ### Minimum requirements
 
 * Raspberry Pi 4 with 4GB RAM 
 * Installed Raspberry Pi OS (64-bit) with the [official imager](https://www.raspberrypi.com/software/)
 
-### [WIP] Sync table
-| Release | MicroSD | SWAP config | Crashes | Headers | Node | Wallet | Total | 
-| --- | --- | --- | --- | --- | --- | --- | --- | 
-| 4.0.35 | 256gb | yes | - | 2h | [in progress] | - | - | 
-| 4.0.35 | 256gb | - | 2 | 2.25h | 46h | 13h | 2.6 days | 
-| 4.0.27 | 256gb | yes | - | 1h | 30h | 5h | 1.5 days | 
-| 4.0.27 | 32gb | yes | 4 | 3h | 90h | 15h | 4.5 days | 
-
+> Tracker to compare Raspberry Pi [header sync durations](node-runner/README.md) for each release.
 
 ### Prepare installation
 ```bash
@@ -154,3 +145,5 @@ sudo systemctl daemon-reload
 sudo systemctl enable ergonode.service
 sudo systemctl start ergonode.service
 ```
+
+
