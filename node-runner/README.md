@@ -1,7 +1,7 @@
 
-## RPi header sync
+## RPi node sync
 
-Track and compare the different Ergo node releases over time for the Raspberry Pi and its optimal configurations.
+Track and compare the different Ergo node release sync durations over time for the Raspberry Pi and its optimal configurations.
 
 ## Outcomes
 

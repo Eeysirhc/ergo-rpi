@@ -11,7 +11,7 @@ The node is a critical piece of infrastructure to interact, host, and synchroniz
 * Raspberry Pi 4 with 4GB RAM 
 * Installed Raspberry Pi OS (64-bit) with the [official imager](https://www.raspberrypi.com/software/)
 
-> Tracker to compare Raspberry Pi [header sync durations](node-runner/README.md) for each release.
+> Tracker to compare Raspberry Pi [node sync durations](node-runner/) for each release.
 
 ### Prepare installation
 ```bash
