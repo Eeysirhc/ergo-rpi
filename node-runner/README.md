@@ -12,9 +12,9 @@ Track and compare the different Ergo node release sync durations over time for t
 | Config | Start Date | Start Time | Start Height | Start GB | End Date | End Time | End Height | End GB | 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | default | 2022-08-08 | 13:04:06 | 811429 | 2.1 | - | - | - | - | 
-| swapsize | 2022-8-08 | 13:04:06 | 811249 | 3.9 | - | - | - | - | 
+| swapsize | 2022-08-08 | 13:04:06 | 811249 | 3.9 | - | - | - | - | 
 
-## DIY steps
+## DIY analysis
 
 ### Retrieve & process log files
 
