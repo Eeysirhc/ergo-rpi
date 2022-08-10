@@ -2,91 +2,9 @@
 
 This repo is primarily intended for developers running headless Raspberry Pi's (no desktop environment) who want to use the various Ergo services. With that said, individuals on the desktop version can still follow this guide by executing the same commands in their Pi terminal window.
 
-## [Ergo Node](https://github.com/ergoplatform/ergo)
+## Guides
 
-The node is a critical piece of infrastructure to interact, host, and synchronize a copy of the entire Ergo blockchain. There is no financial incentive to run a node but doing so helps increase the security of the network.
-
-### Minimum requirements
-
-* Raspberry Pi 4 with 4GB RAM 
-* Installed Raspberry Pi OS (64-bit) with the [official imager](https://www.raspberrypi.com/software/)
-
-> Tracker to compare Raspberry Pi [node sync durations](https://github.com/Eeysirhc/ergo-rpi-node-logs) for each release.
-
-### Prepare installation
-```bash
-sudo apt update && sudo apt upgrade -y
-sudo apt install default-jdk -y
-```
-
-### Download JAR
-
-Find the latest release in the [Ergo GitHub](https://github.com/ergoplatform/ergo/releases).
-
-```bash
-wget https://github.com/ergoplatform/ergo/releases/download/v<VERSION>/ergo-<VERSION>.jar
-````
-
-### Compute API key hash
-
-Replace `hello` with your own secret key.
-
-```bash
-curl -X POST "http://213.239.193.208:9053/utils/hash/blake2b" \
--H "accept: application/json" \
--H "Content-Type: application/json" \
--d "\"hello\""
-```
-
-### Add config file
-
-The following command opens up the text editor.
-
-```bash
-sudo nano ergo.conf 
-```
-
-Then copy & paste the contents below while also replacing the `apiKeyHash` with the response from the previous step.
-
-```bash
-ergo {
-  node {
-    mining = false
-  }
-}
-
-scorex {
- restApi {
-    # Hex-encoded Blake2b256 hash of an API key. 
-    # Should be 64-chars long Base16 string.
-    # below is the hash of the string 'hello'
-    # replace with your actual hash 
-    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
-  }
-}
-```
-
-### Launch node (with 2gb heap size)
-```bash
-java -jar -Xmx2g ergo-<NODE>.jar --mainnet -c ergo.conf
-```
-
-### Web UI access
-
-The default address is `127.0.0.1` but if you're running headless then you can bring up the node UI on a separate computer.
-
-```bash
-http://<RPI-IP-ADDRESS>:9053/panel
-```
-
-## Coming soon
-
-- [ ] [Ergo Wallet App (desktop)](https://github.com/ergoplatform/ergo-wallet-app)
-- [ ] [Ergo Mixer](https://github.com/ergoMixer/ergoMixBack)
-- [ ] [ErgoDEX Off-Chain Bots](https://github.com/ergolabs/ergo-dex-backend)
-- [ ] [Ergo Off-Chain Execution](https://github.com/ergo-pad/ergo-offchain-execution)
-- [ ] [ErgoPad Off-Chain](https://github.com/ergo-pad/ergopad-offchain)
-- [ ] [Paideia Off-Chain](https://github.com/ergo-pad/paideia-offchain)
+* [Ergo Node](docs/ergo-node.md)
 
 ## systemd
 
@@ -128,3 +46,14 @@ sudo systemctl daemon-reload
 sudo systemctl enable ergonode.service
 sudo systemctl start ergonode.service
 ```
+
+## Coming soon
+
+* [Ergo Wallet App (desktop)](https://github.com/ergoplatform/ergo-wallet-app)
+* [Ergo Mixer](https://github.com/ergoMixer/ergoMixBack)
+* [ErgoDEX Off-Chain Bots](https://github.com/ergolabs/ergo-dex-backend)
+* [Ergo Off-Chain Execution](https://github.com/ergo-pad/ergo-offchain-execution)
+* [ErgoPad Off-Chain](https://github.com/ergo-pad/ergopad-offchain)
+* [Paideia Off-Chain](https://github.com/ergo-pad/paideia-offchain)
+
+
