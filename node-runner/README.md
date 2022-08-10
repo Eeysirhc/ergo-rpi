@@ -1,11 +1,13 @@
 
 ## Node Runner
 
-Track and compare the different Ergo node release sync durations over time for the Raspberry Pi and its various configurations.
+The Ergo node completes a full sync in 3 separate stages: `headers`, `node`, and `wallet`.
+
+Since the `node` sync phase is the most time consuming part of the process, the goal of this is to track and compare node releases over time. With this data we can benchmark each version, estimate time to sync for an RPi, identify optimal configurations, shed light on any issues, and more. 
 
 ## Release: 4.0.37
 
-### Recommendation: Default settings
+With default settings, although marginally slower to sync in the beginning, eventually outpaced the RPi that increased its SWAP size.
 
 ![](img/results-4.0.37.png)
 
@@ -22,7 +24,7 @@ Track and compare the different Ergo node release sync durations over time for t
 bash runner-logs.sh 
 ```
 
-When prompted insert `node IP address` and `node logs directory`.
+Enter your `node IP address` and `node logs directory` when prompteed.
 
 ### Compute results
 
@@ -42,3 +44,6 @@ Rscript logs-comparo.R
 | 4.0.35 | 256gb | - | 2 | 2.25h | 46h | 13h | 2.6 days | 
 | 4.0.27 | 256gb | yes | - | 1h | 30h | 5h | 1.5 days | 
 | 4.0.27 | 32gb | yes | 4 | 3h | 90h | 15h | 4.5 days | 
+
+
+
