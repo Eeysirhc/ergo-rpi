@@ -3,11 +3,11 @@
 
 The Ergo node completes a full sync in 3 separate stages: `headers`, `node`, and `wallet`.
 
-Since the `node` sync phase is the most time consuming part of the process, the goal of this is to track and compare node releases over time. With this data we can benchmark each version, estimate time to sync for an RPi, identify optimal configurations, shed light on any issues, and more. 
+Since the `node` sync phase is the most time consuming part of the process, the goal of this is to track and compare node sync durations over time. With this data we can benchmark each version, estimate time to sync for an RPi, identify optimal configurations, shed light on issues, and more. 
 
 ## Release: 4.0.37
 
-With default settings, although marginally slower to sync in the beginning, eventually outpaced the RPi that increased its SWAP size.
+Full `node` sync for this version completed in 26 hours with default settings which is a significant improvement to v4.0.35 of 46 hours (-43% reduction).
 
 ![](img/results-4.0.37.png)
 
