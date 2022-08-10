@@ -29,31 +29,36 @@ df <- df_raw %>%
     hour = hour(as.ITime(time)))
 
 # process data
-df %>% 
-  group_by(sync_date, hour) %>% 
+df_final <- df %>% 
+  group_by(filename, sync_date, hour) %>% 
+  arrange(sync_date, time) %>% 
   count() %>% 
   ungroup() %>% 
-  mutate(
-  # start header sync at 0 hour
-    hour_standardized = row_number()-1) %>% 
+  group_by(filename) %>% 
+  mutate(hour_standardized = row_number() - 1) %>% 
   ungroup() %>% 
-  mutate(n_cumsum = cumsum(n)) %>% 
-  mutate(id = "4.0.27-swap") -> c
-
-df_final <- bind_rows(a, b, c)
+  group_by(filename) %>% 
+  mutate(block_height = cumsum(n)) %>% 
+  ungroup()
 
 # plot graph
-df_final %>% 
-  mutate(n_cumsum = n_cumsum) %>% 
-  ggplot(aes(hour_standardized, n_cumsum, color = id)) +
-  geom_line() +
-  geom_point() + 
-  geom_hline(yintercept = 815000, lty = 2) + 
+p <- df_final %>% 
+  ggplot(aes(hour_standardized, block_height, color = filename)) +
+  geom_line(size = 1) +
+  geom_point(size = 3) + 
+  geom_hline(yintercept = 813000, lty = 2) + 
   scale_y_continuous(labels = comma_format()) +
   scale_color_brewer(palette = 'Set1') + 
   labs(x = "Node Sync Hour",
        y = NULL,
        color = NULL,
-       title = "Ergo: 4.0.37 release comparison") +
+       title = "ergo-rpi: 4.0.37 release comparison") +
   theme_bw(base_size = 15) +
   theme(legend.position = 'top')
+
+# save graph
+ggsave("img/results-4.0.37.png",
+       plot = p,
+       width = 18,
+       height = 12,
+       dpi = 300)

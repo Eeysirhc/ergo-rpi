@@ -1,11 +1,18 @@
 
-## RPi node sync
+## Node Runner
 
-Track and compare the different Ergo node release sync durations over time for the Raspberry Pi and its optimal configurations.
+Track and compare the different Ergo node release sync durations over time for the Raspberry Pi and its various configurations.
 
-## Outcomes
+## Release: 4.0.37
 
-*work in progress*
+> Winner: Default settings
+
+![](img/results-4.0.37.png)
+
+| SWAP config | Start Date | Start Time | Start Height | Start GB | End Date | End Time | End Height | End GB | 
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | 
+| - | 2022-08-08 | 13:04:06 | 811429 | 2.1 | - | - | - | - | 
+| yes | 2022-8-08 | 13:04:06 | 811249 | 3.9 | - | - | - | - | 
 
 ## DIY steps
 
@@ -35,5 +42,3 @@ Rscript logs-comparo.R
 | 4.0.35 | 256gb | - | 2 | 2.25h | 46h | 13h | 2.6 days | 
 | 4.0.27 | 256gb | yes | - | 1h | 30h | 5h | 1.5 days | 
 | 4.0.27 | 32gb | yes | 4 | 3h | 90h | 15h | 4.5 days | 
-
-
