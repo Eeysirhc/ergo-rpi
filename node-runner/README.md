@@ -5,14 +5,14 @@ Track and compare the different Ergo node release sync durations over time for t
 
 ## Release: 4.0.37
 
-> Winner: Default settings
+### Recommendation: Default settings
 
 ![](img/results-4.0.37.png)
 
-| SWAP config | Start Date | Start Time | Start Height | Start GB | End Date | End Time | End Height | End GB | 
+| Config | Start Date | Start Time | Start Height | Start GB | End Date | End Time | End Height | End GB | 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| - | 2022-08-08 | 13:04:06 | 811429 | 2.1 | - | - | - | - | 
-| yes | 2022-8-08 | 13:04:06 | 811249 | 3.9 | - | - | - | - | 
+| default | 2022-08-08 | 13:04:06 | 811429 | 2.1 | - | - | - | - | 
+| swapsize | 2022-8-08 | 13:04:06 | 811249 | 3.9 | - | - | - | - | 
 
 ## DIY steps
 
