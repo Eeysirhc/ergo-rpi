@@ -11,29 +11,12 @@ The node is a critical piece of infrastructure to interact, host, and synchroniz
 * Raspberry Pi 4 with 4GB RAM 
 * Installed Raspberry Pi OS (64-bit) with the [official imager](https://www.raspberrypi.com/software/)
 
-> Tracker to compare Raspberry Pi [node sync durations](node-runner/) for each release.
+> Tracker to compare Raspberry Pi [node sync durations](https://github.com/Eeysirhc/ergo-rpi-node-logs) for each release.
 
 ### Prepare installation
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install default-jdk -y
-```
-
-### Increase SWAP size
-
-The steps below optimizes your Pi's hardware and extends its operational capabilities. 
-
-```bash
-sudo dphys-swapfile swapoff
-sudo nano /etc/dphys-swapfile
-
-# Edit the default value of 100
-CONF_SWAPSIZE=4096
-# Save file with "CTRL + X" then hit "Y" and "ENTER" to confirm
-
-sudo dphys-swapfile setup
-sudo dphys-swapfile swapon
-sudo reboot now
 ```
 
 ### Download JAR
@@ -145,5 +128,3 @@ sudo systemctl daemon-reload
 sudo systemctl enable ergonode.service
 sudo systemctl start ergonode.service
 ```
-
-
